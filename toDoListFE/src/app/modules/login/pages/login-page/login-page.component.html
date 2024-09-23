@@ -1,0 +1,26 @@
+<div class="login-container">
+  <section class="signin-container">
+    <div class="header">{{ isSignin ? "Sign In" : "Sign up" }}</div>
+    <div class="form-group">
+      <label class="label">Username</label>
+      <input
+        class="text-field"
+        [(ngModel)]="user.username"
+        placeholder="Enter username here.."
+      />
+    </div>
+    <span class="error-message">{{ submissionError | async }}</span>
+    <div class="button-container">
+      <button class="button add-button" (click)="isSignin = !isSignin">
+        {{ isSignin ? "Sign up" : "Sign in" }}
+      </button>
+      <button class="button" (click)="submit()">submit</button>
+    </div>
+  </section>
+  <div class="warning-container">
+    <p>
+      <span class="warning-title">warning:</span> this site is has no real
+      authentication, please do not use any potentially sensitive information.
+    </p>
+  </div>
+</div>

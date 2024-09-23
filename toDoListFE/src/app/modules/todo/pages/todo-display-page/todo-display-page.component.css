@@ -1,0 +1,8 @@
+.toDoDisplay {
+  height: calc(100vh - 76px);
+}
+:host {
+  height: calc(100vh - 76px);
+  display: flex;
+  flex-direction: column;
+}

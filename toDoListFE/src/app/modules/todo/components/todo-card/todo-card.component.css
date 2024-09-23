@@ -1,0 +1,158 @@
+.card {
+  display: flex;
+  flex-direction: row;
+  margin: 1rem;
+  padding: 1rem;
+  background-color: #333;
+  align-items: center;
+  border-radius: 10px;
+  transition: max-all 0.22s linear;
+}
+.date {
+  border: solid white 2px;
+  color: #c0c0c0;
+}
+.infoGroup {
+  background-color: #333;
+  color: white;
+  height: fit-content;
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.titleContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-shadow: 0px 0px #ffffff;
+  letter-spacing: 1px;
+}
+.descriptionWrapper {
+  overflow: hidden;
+  box-shadow: -1px 1px 60px 5px rgba(0, 0, 0, 0.75);
+  margin: 0;
+}
+.description {
+  margin: 0px;
+}
+.descriptionTitle {
+  border-bottom: #ffffff solid 2px;
+  width: fit-content;
+  margin-bottom: 0.55rem;
+  margin-top: 0;
+  font-weight: bolder;
+  text-shadow: 0px 0px #ffffff;
+  letter-spacing: 0.5px;
+}
+.spacer {
+  height: 1em;
+}
+.showContainer .descriptionWrapper {
+  overflow: hidden;
+  box-shadow: none;
+}
+.descriptionContainer {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.25s linear;
+  border-radius: 5px;
+  padding-left: 1rem;
+  width: 100%;
+}
+.descriptionContainer.showContainer {
+  grid-template-rows: 1fr;
+  border-radius: 2px;
+  box-shadow: -1px 1px 60px 5px rgba(0, 0, 0, 0.75);
+  width: 100%;
+  padding-left: 1rem;
+}
+.descriptionButton {
+  height: fit-content;
+  color: gray;
+  background-color: transparent;
+  border: none;
+  font-size: medium;
+  margin: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.15s ease-in-out;
+}
+.descriptionButton span {
+  padding: 0;
+  margin: 0;
+  padding-right: 0.4rem;
+}
+.descriptionButton .ng-fa-icon {
+  display: flex;
+  align-items: center;
+}
+.descriptionButton .ng-fa-icon {
+  display: flex;
+  align-items: center;
+  transition: transform 0.25s ease-in-out;
+}
+.descriptionButton .ng-fa-icon.icon-flip {
+  transform: rotate(180deg);
+}
+.descriptionButton:hover {
+  color: #536db1;
+}
+.progressGroup {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  margin-top: 1rem;
+}
+.progress {
+  color: #ffffff;
+  text-shadow: 1px 1px #ffffff;
+  font-weight: bolder;
+  letter-spacing: 2px;
+  padding: 0.1rem 0.25rem;
+}
+.late {
+  color: #ff0000;
+  text-shadow: 1px 1px #ff0000;
+  font-weight: bolder;
+  letter-spacing: 2px;
+  padding: 0.1rem 0.25rem;
+}
+.container {
+  margin-right: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-shadow: -1px 1px 60px 5px rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+.button {
+  background-color: rgba(0, 0, 0, 0);
+  color: #c0c0c0;
+  border: 2px solid #c0c0c0;
+  height: fit-content;
+  border-radius: 10px;
+  transition: all 0.1s ease-in-out;
+  box-shadow: -1px 1px 60px 5px rgba(0, 0, 0, 0.75);
+}
+.deleteButton {
+  margin-right: 2rem;
+  margin-left: 1rem;
+  padding: 1rem;
+  font-size: x-large;
+}
+.updateButton {
+  margin-left: 2rem;
+  padding: 1rem 0.8rem;
+  font-size: x-large;
+}
+.deleteButton:hover,
+.updateButton:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}

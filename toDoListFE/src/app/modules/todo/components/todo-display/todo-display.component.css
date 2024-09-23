@@ -1,0 +1,94 @@
+.display-area {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: overlay;
+  scrollbar-width: none;
+}
+:host {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+.headerArea {
+  background-color: #333;
+  margin: 0.5rem;
+  height: 6.5%;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 0.5rem;
+}
+.buttonGroup {
+  display: flex;
+  gap: 0.5rem;
+}
+.addButton {
+  background-color: #1976d2;
+  font-weight: bold;
+}
+.deleteButton {
+  background-color: #9b111e;
+  font-weight: bold;
+}
+.filterButton {
+  background-color: rgba(0, 0, 0, 0);
+  padding: none;
+  font-weight: lighter;
+}
+.button {
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding: 0.5rem 0.5rem;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  letter-spacing: 0.5px;
+  border-radius: 5px;
+  transition: all 0.22s ease-in-out;
+}
+.button:hover {
+  transform: scale(1.1);
+}
+.todoDisplaySection {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  margin: 1rem;
+  display: flex;
+  border-radius: 0.5%;
+  flex-direction: column;
+}
+.addContainer {
+  border: solid 1px gray;
+  margin: 1rem;
+  display: flex;
+  height: fit-content;
+  justify-content: center;
+  border-radius: 5px;
+  transition: transform 0.15s ease-in-out;
+}
+.addContainer:hover {
+  transform: scale(1.005);
+}
+.addButton {
+  background-color: transparent;
+  border: solid 1px grey;
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 45px;
+  padding: 0.6rem 1rem;
+  font-size: 1.5rem;
+  transition: all 0.15s ease-in-out;
+}
+.addButton:hover {
+  transform: scale(1);
+}
+.addContainer:hover .addButton {
+  transform: scale(1.005);
+  background-color: #444;
+}

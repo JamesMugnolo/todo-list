@@ -1,0 +1,49 @@
+<div class="card" (click)="isSelected = !show">
+  <div class="infoGroup">
+    <div>
+      <div class="titleContainer">
+        <div class="container">
+          <h1 class="title">{{ title }}</h1>
+        </div>
+        <div class="container">
+          <button
+            class="descriptionButton"
+            (click)="show = !show"
+            *ngIf="description != ''"
+          >
+            <span>{{ show ? "hide descrpition" : "show description" }}</span>
+            <fa-icon
+              [class.icon-flip]="show"
+              style="height: fit-content"
+              [icon]="faCaret"
+            ></fa-icon>
+          </button>
+        </div>
+      </div>
+      <div class="descriptionContainer" [class.showContainer]="show">
+        <div #content class="descriptionWrapper" [class.showText]="show">
+          <div class="spacer"></div>
+          <h3 class="descriptionTitle">Details</h3>
+          <p class="description">
+            {{ description }}
+          </p>
+          <div class="spacer"></div>
+        </div>
+      </div>
+    </div>
+    <div class="progressGroup">
+      <div class="container date">
+        <p>{{ formatDate() }}</p>
+      </div>
+      <div class="container">
+        <p [class.progress]="status != 'LATE'" [class.late]="status == 'LATE'">
+          {{ formatStatus() }}
+        </p>
+      </div>
+    </div>
+  </div>
+  <button class="button updateButton" (click)="updateTodo()">
+    <fa-icon [icon]="faPenToSquare"></fa-icon>
+  </button>
+  <button class="button deleteButton" (click)="removeTodo()">X</button>
+</div>

@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="modal-container">
+    <h1 class="header">{{ isAddModal ? "Add Todo" : "Update Todo" }}</h1>
+    <div class="field-collection">
+      <div class="form-group title">
+        <label class="label">title</label>
+        <input
+          class="text-field"
+          [(ngModel)]="todo.title"
+          placeholder="Enter the title here.."
+        />
+        <p class="error">{{ titleError | async }}</p>
+      </div>
+      <div class="form-group">
+        <label class="label">complete by</label>
+        <input
+          class="text-field date"
+          [ngModel]="todo.completeBy | date : 'yyyy-MM-dd'"
+          (change)="viewChange($event)"
+          type="date"
+          name="date"
+          maxlength="8"
+        />
+        <p class="error">{{ dateError | async }}</p>
+      </div>
+      <div class="form-group">
+        <label class="label">status</label>
+        <div class="select-wrapper">
+          <select class="select" name="status" id="status" [(ngModel)]="status">
+            <option *ngIf="!isAddModal">Late</option>
+            <option>In progress</option>
+            <option>Completed</option>
+          </select>
+          <span class="arrows"></span>
+        </div>
+        <p class="error">{{ statusError | async }}</p>
+      </div>
+    </div>
+    <div class="form-group description">
+      <label class="label">description</label>
+      <textarea
+        class="text-area"
+        [(ngModel)]="todo.description"
+        placeholder="Enter the description here..."
+      ></textarea>
+    </div>
+    <div class="button-container">
+      <button class="button close-button" (click)="close()">Close</button>
+      <button
+        class="button add-button"
+        (click)="isAddModal ? addToDo() : updateToDo()"
+      >
+        {{ isAddModal ? "Add" : "Update" }}
+      </button>
+    </div>
+  </div>
+</div>

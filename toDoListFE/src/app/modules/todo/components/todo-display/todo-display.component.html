@@ -1,0 +1,25 @@
+<section class="todoDisplaySection">
+  <!-- <div [class.headerArea]="true">
+    <div [class.buttonGroup]="true">
+      <button class="button filterButton">All</button>
+      <button class="button filterButton">In Progress</button>
+      <button class="button filterButton">Completed</button>
+      <button class="button filterButton">Late</button>
+    </div>
+  </div> -->
+  <div class="addContainer" (click)="openModalComponent()">
+    <button class="button addButton">+</button>
+  </div>
+  <div class="display-area">
+    <div *ngFor="let todo of toDos | async">
+      <app-todo-card
+        [id]="todo.id"
+        [userid]="todo.userid"
+        [title]="todo.title"
+        [description]="todo.description"
+        [status]="todo.status"
+        [completeBy]="todo.completeBy"
+      ></app-todo-card>
+    </div>
+  </div>
+</section>

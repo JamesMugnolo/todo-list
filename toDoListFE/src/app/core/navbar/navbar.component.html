@@ -1,0 +1,6 @@
+<section class="nav-section">
+  <h1>ToDo List</h1>
+  <button *ngIf="isAuthenticated | async as isAuthenticated" (click)="logout()">
+    Sign Out
+  </button>
+</section>
