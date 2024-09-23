@@ -1,0 +1,6 @@
+management:
+  application:
+    name: todo-list
+spring:
+  profiles:
+    active: prod
