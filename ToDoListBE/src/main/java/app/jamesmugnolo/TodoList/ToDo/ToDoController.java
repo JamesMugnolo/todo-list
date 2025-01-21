@@ -17,7 +17,7 @@ import java.util.Optional;
 
 
 @RestController
-@CrossOrigin(origins = {"http://localhost:4200","http://192.168.137.1:8081","http://localhost","https://nginx.jmtodolist.com"})
+@CrossOrigin(origins = {"http://localhost:4200","http://192.168.137.1:8081","http://localhost","https://todos.jm-projects.com"})
 @RequestMapping("/api/todos")
 public class ToDoController {
 
